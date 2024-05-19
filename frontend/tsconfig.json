@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "target": "es6",              // ES6に対応するJavaScriptをターゲット
+    "downlevelIteration": true,   // 古いJavaScriptバージョンでの反復処理のサポート
+    "lib": ["dom", "es6", "dom.iterable", "scripthost"],  // 必要なライブラリファイル
+    // 他のオプションが必要な場合、ここに追加します
+    "allowJs": true,              // JavaScriptファイルのコンパイルを許可
+    "skipLibCheck": true,         // ライブラリ定義ファイルのチェックをスキップ
+    "strict": true,               // 厳格な型チェック
+    "noEmit": true,               // 出力ファイルを生成しない
+    "esModuleInterop": true,      // モジュール間の互換性を高める
+    "module": "esnext",           // 使用するモジュールの種類
+    "moduleResolution": "bundler", // モジュール解決戦略
+    "resolveJsonModule": true,    // JSONモジュールのインポートを許可
+    "isolatedModules": true,      // すべてのファイルを独立したモジュールとして扱う
+    "jsx": "preserve",            // JSXの扱い（Reactの場合は "react-jsx" など）
+    "incremental": true,          // インクリメンタルコンパイルの有効化
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": ["./*"],
+      "@components/*": ["components/*"],
+      "@forms/*":["forms/*"]
+
+    }
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "exclude": ["node_modules"]
+}
