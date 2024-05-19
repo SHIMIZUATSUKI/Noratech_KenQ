@@ -11,7 +11,7 @@ This is a Flask-Next.js repo
 - flask --app app run
 
 ■ frontend
-
+(node_modulesなし)
 - cd frontend
 - npm install
 - npm run dev
